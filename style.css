@@ -1,0 +1,23 @@
+form{ 
+display: flex; 
+flex-direction: column; 
+gap: 10px; 
+width: 300px; 
+margin: 80px auto; 
+}
+input{ 
+padding: 10px; 
+border: 1px solid #ccc; 
+border-radius: 6px; 
+}
+input[type="submit"]{ 
+background: #4f6ef7; 
+color: #fff; 
+border: none; 
+cursor: pointer; 
+}
+.red_box{ 
+padding: 8px; 
+background: #ff11002c; 
+color: #b42318; 
+}
