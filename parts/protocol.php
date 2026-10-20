@@ -1,6 +1,7 @@
 <?php
-if(isset($_GET[0])){
-    $all_getties = $_GET[0];
+$getties = array();
+if(!empty($_SERVER['QUERY_STRING'])){
+    $all_getties = urldecode($_SERVER['QUERY_STRING']);
     $decrypted_getties = decrypt($all_getties, $decrypt_password);
 
     if($decrypted_getties !== false){
@@ -16,14 +17,16 @@ if(isset($_GET[0])){
     }
 }
 
+$logged_protocols = array("page.start", "page.edit");
+
 if(isset($_SESSION['UUID'])){
-    if(isset($getties['protocol'])){
+    if(isset($getties['protocol']) && in_array($getties['protocol'], $logged_protocols)){
         $protocol = $getties['protocol'];
     }else{
         $protocol = "page.start";
     }
 }else{
-    if(isset($getties['protocol'])){
+    if(isset($getties['protocol']) && $getties['protocol'] == "auth.register"){
         $protocol = "auth.register";
     }else{
         $protocol = "auth.login";

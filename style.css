@@ -1,23 +1,72 @@
-form{ 
-display: flex; 
-flex-direction: column; 
-gap: 10px; 
-width: 300px; 
-margin: 80px auto; 
+body{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    font-family: system-ui, sans-serif;
+    background: #f5f6fa;
+    color: #1f2937;
 }
-input{ 
-padding: 10px; 
-border: 1px solid #ccc; 
-border-radius: 6px; 
+a{
+    color: #4f6ef7;
+    text-decoration: none;
 }
-input[type="submit"]{ 
-background: #4f6ef7; 
-color: #fff; 
-border: none; 
-cursor: pointer; 
+a:hover{
+    text-decoration: underline;
 }
-.red_box{ 
-padding: 8px; 
-background: #ff11002c; 
-color: #b42318; 
+h2, h3{
+    margin: 16px 0 8px;
+}
+hr{
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 16px 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 320px;
+    margin: 40px auto;
+}
+input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+input:focus{
+    outline: 2px solid #4f6ef7;
+    border-color: transparent;
+}
+label{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+input[type="submit"]{
+    background: #4f6ef7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+input[type="submit"]:hover{
+    background: #3b5bdb;
+}
+.red_box{
+    padding: 8px;
+    background: #ff11002c;
+    color: #b42318;
+    border-radius: 6px;
+}
+.right_button{
+    float: right;
+}
+body > a{
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
 }

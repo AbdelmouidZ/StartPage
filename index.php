@@ -13,7 +13,7 @@ include("parts/protocol.php");
     </head>
     <body>
         <?php
-            include("tronc/$protocol.php");  
+            include("tronc/$protocol.php");
         ?>
     </body>
 </html>
