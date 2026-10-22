@@ -70,3 +70,31 @@ body > a{
     border: 1px solid #e5e7eb;
     border-radius: 8px;
 }
+#speed-box {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 220px;
+    max-width: 250px;
+    max-height: 250px;
+    box-sizing: border-box;
+    padding: 18px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font: 12px Arial, sans-serif;
+    text-align: center;
+    z-index: 9999;
+}
+#speed-box strong {
+    display: block;
+    font-size: 26px;
+    margin: 12px 0;
+}
+#speed-box small {
+    display: block;
+    margin: 8px 0;
+    color: #aaa;
+    font-size: 10px;
+}
